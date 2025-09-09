@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Creations - Home Baking Made Simple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-amber-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl">🧁</span>
+                    <h1 class="ml-2 text-2xl font-display font-bold text-amber-800">Sweet Creations</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-amber-700 hover:text-amber-900 font-medium transition-colors">Home</a>
+                    <a href="#recipes" class="text-amber-700 hover:text-amber-900 font-medium transition-colors">Recipes</a>
+                    <a href="#tips" class="text-amber-700 hover:text-amber-900 font-medium transition-colors">Tips</a>
+                    <a href="#about" class="text-amber-700 hover:text-amber-900 font-medium transition-colors">About</a>
+                </div>
+                <button class="md:hidden text-amber-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-display font-bold text-amber-900 mb-6">
+                Baking Made Simple
+            </h2>
+            <p class="text-xl text-amber-800 mb-8 max-w-2xl mx-auto">
+                Discover delicious recipes, expert tips, and the joy of creating sweet memories in your own kitchen
+            </p>
+            <button onclick="scrollToSection('recipes')" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg">
+                Explore Recipes
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section id="recipes" class="section-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-display font-bold text-amber-900 mb-4">Featured Recipes</h3>
+                <p class="text-lg text-amber-700">Our most loved baking creations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openRecipe('chocolate-chip')">
+                    <div class="h-48 bg-gradient-to-br from-yellow-200 to-amber-300 flex items-center justify-center">
+                        <span class="text-6xl">🍪</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-display font-semibold text-amber-900 mb-2">Classic Chocolate Chip Cookies</h4>
+                        <p class="text-amber-700 mb-4">Perfectly chewy cookies with melted chocolate chips in every bite</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-amber-600">⏱️ 25 mins</span>
+                            <span class="text-sm text-amber-600">👥 Makes 24</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openRecipe('banana-bread')">
+                    <div class="h-48 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                        <span class="text-6xl">🍌</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-display font-semibold text-amber-900 mb-2">Moist Banana Bread</h4>
+                        <p class="text-amber-700 mb-4">A family favorite that's perfect for breakfast or afternoon tea</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-amber-600">⏱️ 1 hour</span>
+                            <span class="text-sm text-amber-600">👥 Serves 8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openRecipe('vanilla-cupcakes')">
+                    <div class="h-48 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                        <span class="text-6xl">🧁</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-display font-semibold text-amber-900 mb-2">Fluffy Vanilla Cupcakes</h4>
+                        <p class="text-amber-700 mb-4">Light, airy cupcakes topped with creamy buttercream frosting</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-amber-600">⏱️ 35 mins</span>
+                            <span class="text-sm text-amber-600">👥 Makes 12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Baking Tips -->
+    <section id="tips" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-display font-bold text-amber-900 mb-4">Baking Tips & Tricks</h3>
+                <p class="text-lg text-amber-700 mb-6">Master the art of baking with these expert insights</p>
+                <button onclick="openProTips()" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-lg">
+                    🎯 Unlock Pro Tips
+                </button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-amber-50 rounded-xl">
+                    <div class="text-4xl mb-4">🌡️</div>
+                    <h4 class="font-semibold text-amber-900 mb-2">Temperature Matters</h4>
+                    <p class="text-sm text-amber-700">Always preheat your oven and use room temperature ingredients for best results</p>
+                </div>
+                
+                <div class="text-center p-6 bg-amber-50 rounded-xl">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h4 class="font-semibold text-amber-900 mb-2">Measure Precisely</h4>
+                    <p class="text-sm text-amber-700">Baking is a science - accurate measurements ensure consistent results</p>
+                </div>
+                
+                <div class="text-center p-6 bg-amber-50 rounded-xl">
+                    <div class="text-4xl mb-4">🥄</div>
+                    <h4 class="font-semibold text-amber-900 mb-2">Don't Overmix</h4>
+                    <p class="text-sm text-amber-700">Mix just until ingredients are combined to keep your baked goods tender</p>
+                </div>
+                
+                <div class="text-center p-6 bg-amber-50 rounded-xl">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <h4 class="font-semibold text-amber-900 mb-2">Timing is Key</h4>
+                    <p class="text-sm text-amber-700">Set timers and check for doneness with a toothpick or cake tester</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-display font-bold text-amber-900 mb-8">About Sweet Creations</h3>
+            <p class="text-lg text-amber-700 mb-8 leading-relaxed">
+                Welcome to Sweet Creations, where baking dreams come true! We believe that everyone can create delicious, 
+                beautiful baked goods at home. Our carefully tested recipes and helpful tips will guide you on your baking journey, 
+                whether you're a complete beginner or looking to perfect your skills.
+            </p>
+            <div class="flex justify-center space-x-8 text-amber-600">
+                <div class="text-center">
+                    <div class="text-3xl font-bold">100+</div>
+                    <div class="text-sm">Tested Recipes</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">50K+</div>
+                    <div class="text-sm">Happy Bakers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">5★</div>
+                    <div class="text-sm">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl">🧁</span>
+                        <h4 class="ml-2 text-xl font-display font-bold">Sweet Creations</h4>
+                    </div>
+                    <p class="text-amber-200">Making baking accessible and enjoyable for everyone, one recipe at a time.</p>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-amber-200">
+                        <li><a href="#recipes" class="hover:text-white transition-colors">Recipes</a></li>
+                        <li><a href="#tips" class="hover:text-white transition-colors">Baking Tips</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Connect With Us</h5>
+                    <div class="flex space-x-4">
+                        <button class="bg-amber-800 hover:bg-amber-700 p-2 rounded-full transition-colors">📧</button>
+                        <button class="bg-amber-800 hover:bg-amber-700 p-2 rounded-full transition-colors">📱</button>
+                        <button class="bg-amber-800 hover:bg-amber-700 p-2 rounded-full transition-colors">📷</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center text-amber-200">
+                <p>&copy; 2024 Sweet Creations. Made with ❤️ for baking enthusiasts everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="recipeTitle" class="text-2xl font-display font-bold text-amber-900"></h3>
+                    <button onclick="closeRecipe()" class="text-amber-600 hover:text-amber-800 text-2xl">&times;</button>
+                </div>
+                
+                <div id="recipeContent" class="space-y-6">
+                    <!-- Recipe content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pro Tips Modal -->
+    <div id="proTipsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center">
+                        <span class="text-3xl mr-3">🎯</span>
+                        <h3 class="text-2xl font-display font-bold text-amber-900">Professional Baking Secrets</h3>
+                    </div>
+                    <button onclick="closeProTips()" class="text-amber-600 hover:text-amber-800 text-2xl">&times;</button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🧂</span>
+                            <h4 class="font-semibold text-amber-900">The Salt Secret</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Add 1/4 teaspoon of salt to any sweet dessert to enhance and amplify the sweet notes. Salt acts as a flavor enhancer, making chocolate richer and vanilla more pronounced.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🧊</span>
+                            <h4 class="font-semibold text-amber-900">Cold Butter Technique</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">For flaky pastries, grate frozen butter directly into flour. This creates perfect butter distribution and ensures maximum flakiness in pie crusts and scones.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">☕</span>
+                            <h4 class="font-semibold text-amber-900">Coffee Enhancement</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Add 1 teaspoon of instant coffee or espresso powder to chocolate desserts. It won't make them taste like coffee, but will intensify the chocolate flavor dramatically.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🌡️</span>
+                            <h4 class="font-semibold text-amber-900">Oven Spring Trick</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Place a pan of boiling water on the bottom oven rack for the first 15 minutes when baking bread or pastries. The steam creates better oven spring and a glossy crust.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🥄</span>
+                            <h4 class="font-semibold text-amber-900">Reverse Creaming</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">For ultra-tender cakes, mix flour and sugar first, then add cold butter pieces. This "reverse creaming" method creates a finer, more velvety crumb structure.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🍋</span>
+                            <h4 class="font-semibold text-amber-900">Acid Balance</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Add a tablespoon of lemon juice or vinegar to buttercream frosting. The acid cuts through the sweetness and creates a more balanced, professional-tasting frosting.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🌾</span>
+                            <h4 class="font-semibold text-amber-900">Flour Power</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Toast flour in a dry pan for 5 minutes before using in cookies or cakes. This removes the raw flour taste and adds a subtle nutty depth to your baked goods.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-violet-50 to-purple-50 p-6 rounded-xl border border-violet-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🥚</span>
+                            <h4 class="font-semibold text-amber-900">Egg Temperature Test</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Room temperature eggs incorporate better. Quick trick: place cold eggs in warm water for 5 minutes. They'll mix more evenly and create better emulsification in batters.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">🍯</span>
+                            <h4 class="font-semibold text-amber-900">Honey Hack</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Replace 1/4 of the sugar with honey in cookie recipes. Honey is hygroscopic (attracts moisture), keeping cookies soft and chewy for days longer than usual.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-slate-50 to-gray-50 p-6 rounded-xl border border-slate-200">
+                        <div class="flex items-center mb-3">
+                            <span class="text-2xl mr-2">⚖️</span>
+                            <h4 class="font-semibold text-amber-900">Baker's Percentage</h4>
+                        </div>
+                        <p class="text-amber-700 text-sm">Professional bakers use flour weight as 100% and calculate other ingredients as percentages. This makes scaling recipes up or down mathematically precise and foolproof.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-amber-100 rounded-xl border border-amber-300">
+                    <div class="flex items-center mb-2">
+                        <span class="text-xl mr-2">💡</span>
+                        <h4 class="font-semibold text-amber-900">Master Baker's Note</h4>
+                    </div>
+                    <p class="text-amber-800 text-sm italic">These techniques are used in professional kitchens worldwide. Start with one or two, master them, then gradually incorporate others into your baking routine. Small changes make extraordinary differences!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
