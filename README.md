@@ -1,3 +1,4 @@
+
 # SYBAU - Sweet Yummies, Baked Accessibly for You
 
 Welcome to **SYBAU**, a delightful single-page web app for home baking enthusiasts! With a cozy design and user-friendly interface, this project brings you tested recipes, expert baking tips, and the joy of creating sweet treats. Built with HTML, Tailwind CSS, and JavaScript, it’s perfect for beginners and seasoned bakers alike.
@@ -21,3 +22,4 @@ SYBAU (Sweet Yummies, Baked Accessibly for You) is a baking website featuring:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/sybau.git
+
