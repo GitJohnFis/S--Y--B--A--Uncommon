@@ -1,6 +1,12 @@
 
 # SYBAU - Sweet Yummies, Baked Accessibly for You
 
+![Whisk_utyklzyyydm5gjy20czyuwotkdnkrtlwqwyh1cm](https://github.com/user-attachments/assets/1d5337d2-fe7e-4e09-ae2c-afdd12546b31)
+<img width="520" height="3100" alt="Whisk_yznyiwyjjjyhrgmh1yyhztytadm1qtllvwyw0sm" src="https://github.com/user-attachments/assets/93faee1a-64a2-489c-a03b-26822d823174" />
+---
+
+
+
 Welcome to **SYBAU**, a delightful single-page web app for home baking enthusiasts! With a cozy design and user-friendly interface, this project brings you tested recipes, expert baking tips, and the joy of creating sweet treats. Built with HTML, Tailwind CSS, and JavaScript, it’s perfect for beginners and seasoned bakers alike.
 
 ## About the Project
